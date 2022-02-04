@@ -7,6 +7,8 @@ public class PlayerChargeJumpController : MonoBehaviour
 {
     public Rigidbody myRigidBody;
     
+    public GroundChecker myGroundChecker;
+    
     public float minimumJumpForce = 100f;
     
     public float maximumJumpForce = 1000f;
@@ -15,7 +17,7 @@ public class PlayerChargeJumpController : MonoBehaviour
 
     private float chargeProgress = 0f;
 
-    public GroundChecker myGroundChecker;
+
 
     void Update()
     {
@@ -26,7 +28,7 @@ public class PlayerChargeJumpController : MonoBehaviour
     {
         //Get Jump input
         var chargeInput = Input.GetKey(KeyCode.Space);
-        if (chargeInput)
+        if (chargeInput && myGroundChecker.isGrounded)
         {
             //Increase charge progress, dividing Time.deltaTime let us control how many seconds it takes to charge a full jump.
             chargeProgress += Time.deltaTime / jumpChargeTime;
@@ -37,6 +39,8 @@ public class PlayerChargeJumpController : MonoBehaviour
         {
             var jumpForce = Mathf.Lerp(minimumJumpForce, maximumJumpForce, chargeProgress);
             myRigidBody.AddForce(0, jumpForce, 0);
+            //Remember to reset chargeProgress.
+            chargeProgress = 0f;
         }
     }
 }
