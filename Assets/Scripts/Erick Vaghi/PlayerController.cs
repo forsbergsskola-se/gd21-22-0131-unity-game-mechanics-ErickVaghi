@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
         //-transform.up: down in the GameObject's local space.
         // var isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance);
         
+        //Ground checking using sphere cast. Think of it as a sphere being moved along a ray, we hit anything that the sphere touches.
         Ray sphereCastRay = new Ray(transform.position, Vector3.down);
         var isGrounded = Physics.SphereCast(sphereCastRay, groundCheckSphereRadius, groundCheckDistance);
         
