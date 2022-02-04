@@ -517,7 +517,9 @@ GameObject:
   - component: {fileID: 647603865}
   - component: {fileID: 647603864}
   - component: {fileID: 647603869}
-  - component: {fileID: 647603868}
+  - component: {fileID: 647603871}
+  - component: {fileID: 647603870}
+  - component: {fileID: 647603872}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -605,23 +607,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &647603868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 647603863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f76a64a46cfa6846a7ed701945dbd27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myRigidBody: {fileID: 647603869}
-  moveSpeed: 5
-  jumpForce: 500
-  groundCheckDistance: 0.6
-  groundCheckSphereRadius: 0.45
 --- !u!54 &647603869
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -638,6 +623,50 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &647603870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647603863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65cd38da334016843bf8b4c1d17f1ff9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRigidBody: {fileID: 647603869}
+  jumpForce: 500
+  myGroundChecker: {fileID: 647603872}
+--- !u!114 &647603871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647603863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a55ff69d2bf80439933b54b379b487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRigidBody: {fileID: 647603869}
+  walkSpeed: 5
+--- !u!114 &647603872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647603863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20684090d14c2244f848310714bfd981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundCheckDistance: 0.6
+  groundCheckSphereRadius: 0.45
+  isGrounded: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
