@@ -169,7 +169,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7787234, y: 1}
+    m_SensorSize: {x: 1.7798408, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -424,6 +424,7 @@ GameObject:
   - component: {fileID: 647603870}
   - component: {fileID: 647603872}
   - component: {fileID: 647603873}
+  - component: {fileID: 647603874}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -554,6 +555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 647603869}
+  playerInputController: {fileID: 647603874}
   walkSpeed: 5
 --- !u!114 &647603872
 MonoBehaviour:
@@ -587,6 +589,19 @@ MonoBehaviour:
   minimumJumpForce: 100
   maximumJumpForce: 1000
   jumpChargeTime: 1
+--- !u!114 &647603874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647603863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 971b52322e421a041b03087913d8e021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkInput: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

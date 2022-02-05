@@ -5,10 +5,9 @@ using UnityEngine;
 public class PlayerWalkController : MonoBehaviour
 {
     public Rigidbody myRigidBody;
-    
+    public PlayerInputController playerInputController;
     public float walkSpeed = 5f;
 
-    // Update is called once per frame
     void Update()
     {
         HandleWalking();
@@ -16,10 +15,7 @@ public class PlayerWalkController : MonoBehaviour
     
     private void HandleWalking()
     {
-        //Get move input
-        var moveInput = Input.GetAxis("Horizontal");
-      
         //Apply moveSpeed to rigidbody
-        myRigidBody.velocity = new Vector3(walkSpeed * moveInput, myRigidBody.velocity.y, 0);
+        myRigidBody.velocity = new Vector3(walkSpeed * playerInputController.walkInput, myRigidBody.velocity.y, 0);
     }
 }
