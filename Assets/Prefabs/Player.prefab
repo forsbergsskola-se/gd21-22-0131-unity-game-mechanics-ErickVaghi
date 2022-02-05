@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 5743450247585018721}
   jumpForce: 500
+  playerInputController: {fileID: 5743450247585018718}
   myGroundChecker: {fileID: 5743450247585018716}
 --- !u!114 &5743450247585018716
 MonoBehaviour:
@@ -195,3 +196,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkInput: 0
+  jumpInput: 0
