@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class PlayerInputController : MonoBehaviour
 {
-    public float walkInput;
-    public bool jumpInputDown;
-    public bool jumpInput;
-    public bool jumpInputUp;
+    [HideInInspector] public float walkInput;
+    [HideInInspector] public bool jumpInputDown;
+    [HideInInspector] public bool jumpInput;
+    [HideInInspector] public bool jumpInputUp;
     private void Update()
     {
         GetInput();

@@ -9,7 +9,7 @@ public class GroundChecker : MonoBehaviour
     
     [SerializeField] private float groundCheckSphereRadius = 0.45f;
 
-    public bool isGrounded;
+    [HideInInspector] public bool isGrounded;
 
     private void Update()
     {
