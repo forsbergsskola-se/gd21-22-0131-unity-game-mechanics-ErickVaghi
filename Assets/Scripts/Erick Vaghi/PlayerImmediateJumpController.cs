@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class PlayerImmediateJumpController : MonoBehaviour
 {
-    public Rigidbody myRigidBody;
+    [SerializeField] private Rigidbody myRigidBody;
     
-    public float jumpForce = 500f;
+    [SerializeField] private float jumpForce = 500f;
 
-    public PlayerInputController playerInputController;
+    [SerializeField] private PlayerInputController playerInputController;
 
-    public GroundChecker myGroundChecker;
+    [SerializeField] private GroundChecker myGroundChecker;
     
     void Update()
     {

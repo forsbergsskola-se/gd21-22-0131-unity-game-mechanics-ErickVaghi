@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class PlayerWalkController : MonoBehaviour
 {
-    public Rigidbody myRigidBody;
-    public PlayerInputController playerInputController;
-    public float walkSpeed = 5f;
+    [SerializeField] private Rigidbody myRigidBody;
+    [SerializeField] private PlayerInputController playerInputController;
+    [SerializeField] private float walkSpeed = 5f;
 
     void Update()
     {

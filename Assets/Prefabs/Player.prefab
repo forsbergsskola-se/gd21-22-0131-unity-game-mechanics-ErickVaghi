@@ -180,6 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 5743450247585018721}
   myGroundChecker: {fileID: 5743450247585018716}
+  playerInputController: {fileID: 5743450247585018718}
   minimumJumpForce: 100
   maximumJumpForce: 1000
   jumpChargeTime: 1
@@ -196,4 +197,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkInput: 0
+  jumpInputDown: 0
   jumpInput: 0
+  jumpInputUp: 0

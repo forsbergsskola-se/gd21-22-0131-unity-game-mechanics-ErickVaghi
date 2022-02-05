@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class PlayerChargeJumpController : MonoBehaviour
 {
-    public Rigidbody myRigidBody;
+    [SerializeField] private Rigidbody myRigidBody;
     
-    public GroundChecker myGroundChecker;
+    [SerializeField] private GroundChecker myGroundChecker;
 
-    public PlayerInputController playerInputController;
+    [SerializeField] private PlayerInputController playerInputController;
     
-    public float minimumJumpForce = 100f;
-    public float maximumJumpForce = 1000f;
-    public float jumpChargeTime = 1f;
+    [SerializeField] private float minimumJumpForce = 100f;
+    [SerializeField] private float maximumJumpForce = 1000f;
+    [SerializeField] private float jumpChargeTime = 1f;
     private float chargeProgress = 0f;
     
     void Update()
