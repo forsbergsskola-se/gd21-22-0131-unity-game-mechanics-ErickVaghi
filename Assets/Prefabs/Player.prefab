@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5743450247585018716}
   - component: {fileID: 5743450247585018717}
   - component: {fileID: 5743450247585018718}
+  - component: {fileID: 5743450247157683710}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -165,7 +166,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundCheckDistance: 0.6
   groundCheckSphereRadius: 0.45
-  isGrounded: 0
 --- !u!114 &5743450247585018717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,7 +196,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971b52322e421a041b03087913d8e021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkInput: 0
-  jumpInputDown: 0
-  jumpInput: 0
-  jumpInputUp: 0
+  commandContainer: {fileID: 5743450247157683710}
+--- !u!114 &5743450247157683710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5743450247585018731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6f65e8a62490e044b61ad8f4c36052e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkCommand: 0
+  jumpCommand: 0
+  jumpCommandDown: 0
+  jumpCommandUp: 0
