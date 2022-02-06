@@ -14,6 +14,6 @@ public class PlayerWalkController : MonoBehaviour
     private void HandleWalking()
     {
         //Apply moveSpeed to rigidbody
-        myRigidBody.velocity = new Vector3(walkSpeed * playerInputController.walkInput, myRigidBody.velocity.y, 0);
+        myRigidBody.velocity = new Vector3(walkSpeed * playerInputController.WalkInput, myRigidBody.velocity.y, 0);
     }
 }

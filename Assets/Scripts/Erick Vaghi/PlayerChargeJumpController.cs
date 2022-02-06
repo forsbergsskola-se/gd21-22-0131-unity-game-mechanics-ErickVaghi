@@ -23,14 +23,14 @@ public class PlayerChargeJumpController : MonoBehaviour
 
     private void HandleJump()
     {
-        if (playerInputController.jumpInput && myGroundChecker.isGrounded)
+        if (playerInputController.JumpInput && myGroundChecker.IsGrounded)
         {
             //Increase charge progress, dividing Time.deltaTime let us control how many seconds it takes to charge a full jump.
             chargeProgress += Time.deltaTime / jumpChargeTime;
         }
         
         //If we pressed the jump button: then jump
-        if (playerInputController.jumpInputUp && myGroundChecker.isGrounded)
+        if (playerInputController.JumpInputUp && myGroundChecker.IsGrounded)
         {
             var jumpForce = Mathf.Lerp(minimumJumpForce, maximumJumpForce, chargeProgress);
             myRigidBody.AddForce(0, jumpForce, 0);

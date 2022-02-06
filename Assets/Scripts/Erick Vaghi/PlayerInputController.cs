@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class PlayerInputController : MonoBehaviour
 {
-    [HideInInspector] public float walkInput;
-    [HideInInspector] public bool jumpInputDown;
-    [HideInInspector] public bool jumpInput;
-    [HideInInspector] public bool jumpInputUp;
+    public float WalkInput { get; private set; }
+    public bool JumpInputDown { get; private set; }
+    public bool JumpInput { get; private set; }
+    public bool JumpInputUp { get; private set; }
     private void Update()
     {
         GetInput();
@@ -13,10 +13,10 @@ public class PlayerInputController : MonoBehaviour
 
     private void GetInput()
     {
-        walkInput = Input.GetAxis("Horizontal");
+        WalkInput = Input.GetAxis("Horizontal");
         
-        jumpInputDown = Input.GetKeyDown(KeyCode.Space);
-        jumpInput = Input.GetKey(KeyCode.Space);
-        jumpInputUp = Input.GetKeyUp(KeyCode.Space);
+        JumpInputDown = Input.GetKeyDown(KeyCode.Space);
+        JumpInput = Input.GetKey(KeyCode.Space);
+        JumpInputUp = Input.GetKeyUp(KeyCode.Space);
     }
 }

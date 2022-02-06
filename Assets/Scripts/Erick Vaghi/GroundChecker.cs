@@ -9,7 +9,7 @@ public class GroundChecker : MonoBehaviour
     
     [SerializeField] private float groundCheckSphereRadius = 0.45f;
 
-    [HideInInspector] public bool isGrounded;
+    public bool IsGrounded { get; private set; }
 
     private void Update()
     {
@@ -25,7 +25,7 @@ public class GroundChecker : MonoBehaviour
         
         //Ground checking using sphere cast. Think of it as a sphere being moved along a ray, we hit anything that the sphere touches.
         Ray sphereCastRay = new Ray(transform.position, Vector3.down);
-        isGrounded = Physics.SphereCast(sphereCastRay, groundCheckSphereRadius, groundCheckDistance);
+        IsGrounded = Physics.SphereCast(sphereCastRay, groundCheckSphereRadius, groundCheckDistance);
         
         //Draw a ray in the editor, only for visualization.
         //Debug.DrawRay(transform.position, Vector3.down * groundCheckDistance, Color.cyan);

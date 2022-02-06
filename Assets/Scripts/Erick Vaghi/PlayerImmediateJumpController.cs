@@ -17,7 +17,7 @@ public class PlayerImmediateJumpController : MonoBehaviour
     private void HandleJump()
     {
         //If we pressed the jump button: then jump
-        if (playerInputController.jumpInputDown && myGroundChecker.isGrounded)
+        if (playerInputController.JumpInputDown && myGroundChecker.IsGrounded)
             myRigidBody.AddForce(0, jumpForce, 0);
     }
 }
