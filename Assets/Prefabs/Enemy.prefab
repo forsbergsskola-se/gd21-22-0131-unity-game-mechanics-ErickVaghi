@@ -133,6 +133,7 @@ MonoBehaviour:
   jumpCommand: 0
   jumpCommandDown: 0
   jumpCommandUp: 0
+  dashCommand: 0
 --- !u!114 &764707892846189398
 MonoBehaviour:
   m_ObjectHideFlags: 0
