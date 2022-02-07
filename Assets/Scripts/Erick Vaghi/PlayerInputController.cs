@@ -10,6 +10,7 @@ public class PlayerInputController : MonoBehaviour
     private void Update()
     {
         GetInput();
+        SetCommands();
     }
 
     private void GetInput()
