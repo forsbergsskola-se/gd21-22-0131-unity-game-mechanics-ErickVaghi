@@ -181,7 +181,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 5743450247585018721}
   commandContainer: {fileID: 5743450247157683710}
-  playerDashController: {fileID: 2807805502316397038}
   walkSpeed: 8
 --- !u!114 &5743450247585018722
 MonoBehaviour:
@@ -248,8 +247,8 @@ MonoBehaviour:
   myRigidBody: {fileID: 5743450247585018721}
   commandContainer: {fileID: 5743450247157683710}
   playerWalkController: {fileID: 5743450247585018723}
-  dashMoltiplier: 5
-  dashTime: 100
+  dashMoltiplier: 1.5
+  dashTime: 0.001
   dashTimeCounter: 0
   dashCoolDown: 1
   nextDash: 0

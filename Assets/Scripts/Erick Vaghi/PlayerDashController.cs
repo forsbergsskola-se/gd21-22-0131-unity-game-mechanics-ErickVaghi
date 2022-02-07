@@ -15,6 +15,7 @@ public class PlayerDashController : MonoBehaviour
     [SerializeField] private float dashCoolDown = 1f;
     //[SerializeField] private bool isDashing = false;
     [SerializeField] private float nextDash;
+    [SerializeField] private CameraShake cameraShake;
 
     private void Start()
     {
@@ -32,7 +33,8 @@ public class PlayerDashController : MonoBehaviour
         {
             if (commandContainer.dashCommand)
             {
-                dashMoltiplier = playerWalkController.walkSpeed * 5;
+                cameraShake.Shake(.15f, 40f);
+                dashMoltiplier = playerWalkController.walkSpeed * 3;
                 playerWalkController.walkSpeed = dashMoltiplier;
                 dashTimeCounter = dashTime;
                 nextDash = Time.time + dashCoolDown;
