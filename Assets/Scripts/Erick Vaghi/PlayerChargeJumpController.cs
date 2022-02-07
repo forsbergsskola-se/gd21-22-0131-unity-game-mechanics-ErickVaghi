@@ -9,7 +9,7 @@ public class PlayerChargeJumpController : MonoBehaviour
     
     [SerializeField] private GroundChecker myGroundChecker;
 
-    [SerializeField] private PlayerInputController playerInputController;
+    [SerializeField] private CommandContainer commandContainer;
     
     [SerializeField] private float minimumJumpForce = 100f;
     [SerializeField] private float maximumJumpForce = 1000f;
@@ -23,14 +23,14 @@ public class PlayerChargeJumpController : MonoBehaviour
 
     private void HandleJump()
     {
-        if (playerInputController.JumpInput && myGroundChecker.IsGrounded)
+        if (commandContainer.jumpCommand && myGroundChecker.IsGrounded)
         {
             //Increase charge progress, dividing Time.deltaTime let us control how many seconds it takes to charge a full jump.
             chargeProgress += Time.deltaTime / jumpChargeTime;
         }
         
         //If we pressed the jump button: then jump
-        if (playerInputController.JumpInputUp && myGroundChecker.IsGrounded)
+        if (commandContainer.jumpCommandUp && myGroundChecker.IsGrounded)
         {
             var jumpForce = Mathf.Lerp(minimumJumpForce, maximumJumpForce, chargeProgress);
             myRigidBody.AddForce(0, jumpForce, 0);

@@ -6,7 +6,7 @@ public class PlayerImmediateJumpController : MonoBehaviour
     
     [SerializeField] private float jumpForce = 500f;
 
-    [SerializeField] private PlayerInputController playerInputController;
+    [SerializeField] private CommandContainer commandContainer;
 
     [SerializeField] private GroundChecker myGroundChecker;
     
@@ -17,7 +17,7 @@ public class PlayerImmediateJumpController : MonoBehaviour
     private void HandleJump()
     {
         //If we pressed the jump button: then jump
-        if (playerInputController.JumpInputDown && myGroundChecker.IsGrounded)
+        if (commandContainer.jumpCommandDown && myGroundChecker.IsGrounded)
             myRigidBody.AddForce(0, jumpForce, 0);
     }
 }
