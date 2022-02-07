@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5743450247585018716}
   - component: {fileID: 5743450247585018723}
   - component: {fileID: 5743450247585018722}
+  - component: {fileID: 5743450247157683720}
   - component: {fileID: 5743450247585018717}
   - component: {fileID: 2807805502316397038}
   m_Layer: 0
@@ -188,7 +189,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5743450247585018731}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65cd38da334016843bf8b4c1d17f1ff9, type: 3}
   m_Name: 
@@ -197,7 +198,7 @@ MonoBehaviour:
   jumpForce: 500
   commandContainer: {fileID: 5743450247157683710}
   myGroundChecker: {fileID: 5743450247585018716}
---- !u!114 &5743450247585018717
+--- !u!114 &5743450247157683720
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -205,6 +206,22 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5743450247585018731}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d814449eea2cd04abb06f654c7bd3f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
+  myRigidbody: {fileID: 5743450247585018721}
+  commandContainer: {fileID: 5743450247157683710}
+--- !u!114 &5743450247585018717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5743450247585018731}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2ebbde3609c83745b039d7b39e5bb70, type: 3}
   m_Name: 
