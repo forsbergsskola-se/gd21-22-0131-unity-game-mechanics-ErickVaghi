@@ -469,28 +469,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5743450247585018727, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
   m_PrefabInstance: {fileID: 5743450247157683708}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &647603868 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2807805502316397038, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-  m_PrefabInstance: {fileID: 5743450247157683708}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d88ec01d264d9ec4bb0f00f10f117f38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &647603872 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5743450247585018723, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-  m_PrefabInstance: {fileID: 5743450247157683708}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83a55ff69d2bf80439933b54b379b487, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,29 +812,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2807805502316397038, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-      propertyPath: playerWalkController
-      value: 
-      objectReference: {fileID: 647603872}
-    - target: {fileID: 5743450247157683720, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-      propertyPath: fallMultiplier
-      value: 3
+      propertyPath: dashTime
+      value: 0.01
       objectReference: {fileID: 0}
-    - target: {fileID: 5743450247157683720, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-      propertyPath: lowJumpMultiplier
-      value: 3
+    - target: {fileID: 2807805502316397038, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
+      propertyPath: dashMoltiplier
+      value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5743450247585018722, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-      propertyPath: jumpForce
-      value: 550
-      objectReference: {fileID: 0}
-    - target: {fileID: 5743450247585018723, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-      propertyPath: walkSpeed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5743450247585018723, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-      propertyPath: playerDashController
-      value: 
-      objectReference: {fileID: 647603868}
     - target: {fileID: 5743450247585018727, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
       propertyPath: m_RootOrder
       value: 3

@@ -181,7 +181,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 5743450247585018721}
   commandContainer: {fileID: 5743450247157683710}
-  walkSpeed: 5
+  playerDashController: {fileID: 2807805502316397038}
+  walkSpeed: 8
 --- !u!114 &5743450247585018722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 5743450247585018721}
-  jumpForce: 500
+  jumpForce: 550
   commandContainer: {fileID: 5743450247157683710}
   myGroundChecker: {fileID: 5743450247585018716}
 --- !u!114 &5743450247157683720
@@ -210,8 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d814449eea2cd04abb06f654c7bd3f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMultiplier: 2.5
-  lowJumpMultiplier: 2
+  fallMultiplier: 3
+  lowJumpMultiplier: 3
   myRigidbody: {fileID: 5743450247585018721}
   commandContainer: {fileID: 5743450247157683710}
 --- !u!114 &5743450247585018717
@@ -246,4 +247,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 5743450247585018721}
   commandContainer: {fileID: 5743450247157683710}
-  dashForce: 10000
+  playerWalkController: {fileID: 5743450247585018723}
+  dashMoltiplier: 5
+  dashTime: 100
+  dashTimeCounter: 0
+  dashCoolDown: 1
+  nextDash: 0
