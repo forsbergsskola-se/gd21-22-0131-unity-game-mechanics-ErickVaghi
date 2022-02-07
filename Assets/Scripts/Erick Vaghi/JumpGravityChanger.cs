@@ -18,7 +18,7 @@ public class JumpGravityChanger : MonoBehaviour
         {
             myRigidbody.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
-        else if (myRigidbody.velocity.y > 0 && commandContainer.jumpCommand)
+        else if (myRigidbody.velocity.y > 0 && !commandContainer.jumpCommand)
         {
             myRigidbody.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
