@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerInputController : MonoBehaviour
 {
     [SerializeField] private CommandContainer commandContainer;
-    public float WalkInput { get; private set; }
+    public float WalkInput;
     public bool JumpInputDown { get; private set; }
     public bool JumpInput { get; private set; }
     public bool JumpInputUp { get; private set; }
