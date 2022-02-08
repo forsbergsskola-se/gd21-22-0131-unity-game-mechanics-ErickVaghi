@@ -695,33 +695,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3dd41802921e1f47a36512df78ee30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1035550824 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5743450247585018731, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-  m_PrefabInstance: {fileID: 5743450247157683708}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1035550825 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2807805502316397038, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-  m_PrefabInstance: {fileID: 5743450247157683708}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1035550824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d88ec01d264d9ec4bb0f00f10f117f38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1035550832 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5743450247585018718, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-  m_PrefabInstance: {fileID: 5743450247157683708}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1035550824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 971b52322e421a041b03087913d8e021, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1551388393
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,29 +857,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2807805502316397038, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-      propertyPath: dashTime
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2807805502316397038, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
       propertyPath: cameraShake
       value: 
       objectReference: {fileID: 963194230}
-    - target: {fileID: 2807805502316397038, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-      propertyPath: dashMoltiplier
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2807805502316397038, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-      propertyPath: myPlayerInputController
-      value: 
-      objectReference: {fileID: 1035550832}
-    - target: {fileID: 2807805502316397038, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-      propertyPath: objectToActivateAndDeactivate
-      value: 
-      objectReference: {fileID: 1035550824}
-    - target: {fileID: 5743450247585018723, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-      propertyPath: myPlayerDashController
-      value: 
-      objectReference: {fileID: 1035550825}
     - target: {fileID: 5743450247585018727, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
       propertyPath: m_RootOrder
       value: 3

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 5743450247157683720}
   - component: {fileID: 5743450247585018717}
   - component: {fileID: 2807805502316397038}
+  - component: {fileID: 6716313718201129806}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -136,6 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   commandContainer: {fileID: 5743450247157683710}
+  WalkInput: 0
 --- !u!114 &5743450247157683710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 5743450247585018721}
   commandContainer: {fileID: 5743450247157683710}
+  myPlayerDashController: {fileID: 2807805502316397038}
   walkSpeed: 8
 --- !u!114 &5743450247585018722
 MonoBehaviour:
@@ -246,9 +249,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 5743450247585018721}
   commandContainer: {fileID: 5743450247157683710}
+  myPlayerInputController: {fileID: 5743450247585018718}
   playerWalkController: {fileID: 5743450247585018723}
-  dashMoltiplier: 1.5
-  dashTime: 0.001
+  dashMoltiplier: 10
+  dashTime: 0.1
   dashTimeCounter: 0
-  dashCoolDown: 1
-  nextDash: 0
+  isDashing: 0
+  verticalVelocityMultiplier: 1
+  cameraShake: {fileID: 0}
+--- !u!114 &6716313718201129806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5743450247585018731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c611955f91d2089479dbcee6dd83156b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

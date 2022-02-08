@@ -14,7 +14,7 @@ public class PlayerDashController : MonoBehaviour
     [SerializeField] private float dashTime = 5f;
     [SerializeField] private float dashTimeCounter = 0f;
     //[SerializeField] private float dashCoolDown = 1f;
-    //[SerializeField] private float nextDash;
+    //[SerializeField] private float nextDash = 0;
     [SerializeField] private bool isDashing;
     
     public float verticalVelocityMultiplier = 1f; 
@@ -33,74 +33,39 @@ public class PlayerDashController : MonoBehaviour
 
     private void Update()
     {
-        //HandleDash();
-        //if (Time.time > nextDash)
-        //{
-            if (commandContainer.dashCommand && !isDashing)
-            {
-                //cameraShake.Shake(.15f, 40f);
-                tempWalkSpeed = playerWalkController.walkSpeed * dashMoltiplier;
-                playerWalkController.walkSpeed = tempWalkSpeed;
-                verticalVelocityMultiplier = 0;
-                dashTimeCounter = dashTime;
-                //nextDash = Time.time + dashCoolDown;
-                //Debug.Log("dashing");
-                myPlayerInputController.enabled = false;
-                commandContainer.dashCommand = false;
-                isDashing = true;
-                Debug.Log(isDashing);
-            }
-            if (isDashing)
-            {
-                Debug.Log("start counting");
-                dashTimeCounter -= Time.deltaTime;
-                Debug.Log(dashTimeCounter);
-                if (dashTimeCounter <= 0)
-                {
-                    Debug.Log("stopped dashing");
-                    myPlayerInputController.enabled = true;
-                    verticalVelocityMultiplier = 1;
-                    playerWalkController.walkSpeed = originalSpeed;
-                    isDashing = false;
-                }
-            }
-        //}
+        HandleDash();
     }
 
-    /*void HandleDash()
+    void HandleDash()
     {
-        if (Time.time > nextDash)
+        if (commandContainer.dashCommand && !isDashing)
         {
-            if (commandContainer.dashCommand && !isDashing)
+            //cameraShake.Shake(.15f, 40f);
+            tempWalkSpeed = playerWalkController.walkSpeed * dashMoltiplier;
+            playerWalkController.walkSpeed = tempWalkSpeed;
+            verticalVelocityMultiplier = 0;
+            dashTimeCounter = dashTime;
+            //Debug.Log("dashing");
+            myPlayerInputController.enabled = false;
+            commandContainer.dashCommand = false;
+            isDashing = true;
+            Debug.Log(isDashing);
+        }
+        if (isDashing)
+        {
+            Debug.Log("start counting");
+            dashTimeCounter -= Time.deltaTime;
+            Debug.Log(dashTimeCounter);
+            if (dashTimeCounter <= 0)
             {
-                //cameraShake.Shake(.15f, 40f);
-                tempWalkSpeed = playerWalkController.walkSpeed * dashMoltiplier;
-                playerWalkController.walkSpeed = tempWalkSpeed;
-                verticalVelocityMultiplier = 0;
-                dashTimeCounter = dashTime;
-                nextDash = Time.time + dashCoolDown;
-                //Debug.Log("dashing");
-                myPlayerInputController.enabled = false;
-                commandContainer.dashCommand = false;
-                isDashing = true;
-                Debug.Log(isDashing);
-            }
-            if (isDashing)
-            {
-                Debug.Log("start counting");
-                dashTimeCounter -= Time.deltaTime;
-                Debug.Log(dashTimeCounter);
-                if (dashTimeCounter <= 0)
-                {
-                    Debug.Log("stopped dashing");
-                    myPlayerInputController.enabled = true;
-                    verticalVelocityMultiplier = 1;
-                    playerWalkController.walkSpeed = originalSpeed;
-                    isDashing = false;
-                }
+                Debug.Log("stopped dashing");
+                myPlayerInputController.enabled = true;
+                verticalVelocityMultiplier = 1;
+                playerWalkController.walkSpeed = originalSpeed;
+                isDashing = false;
             }
         }
-    }*/
+    }
 }
 
 // if (Time.time > nextDash)
