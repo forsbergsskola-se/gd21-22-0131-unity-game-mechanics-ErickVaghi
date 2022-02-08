@@ -38,7 +38,7 @@ public class PlayerDashController : MonoBehaviour
 
     void HandleDash()
     {
-        if (commandContainer.dashCommand && !isDashing)
+        if (commandContainer.dashCommandDown && !isDashing)
         {
             //cameraShake.Shake(.15f, 40f);
             tempWalkSpeed = playerWalkController.walkSpeed * dashMoltiplier;
@@ -47,18 +47,18 @@ public class PlayerDashController : MonoBehaviour
             dashTimeCounter = dashTime;
             //Debug.Log("dashing");
             myPlayerInputController.enabled = false;
-            commandContainer.dashCommand = false;
+            commandContainer.dashCommandDown = false;
             isDashing = true;
-            Debug.Log(isDashing);
+            //Debug.Log(isDashing);
         }
         if (isDashing)
         {
-            Debug.Log("start counting");
+            //Debug.Log("start counting");
             dashTimeCounter -= Time.deltaTime;
-            Debug.Log(dashTimeCounter);
+            //Debug.Log(dashTimeCounter);
             if (dashTimeCounter <= 0)
             {
-                Debug.Log("stopped dashing");
+                //Debug.Log("stopped dashing");
                 myPlayerInputController.enabled = true;
                 verticalVelocityMultiplier = 1;
                 playerWalkController.walkSpeed = originalSpeed;

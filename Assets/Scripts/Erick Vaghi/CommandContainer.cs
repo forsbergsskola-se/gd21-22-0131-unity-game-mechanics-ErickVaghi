@@ -7,4 +7,6 @@ public class CommandContainer : MonoBehaviour
     public bool jumpCommandDown;
     public bool jumpCommandUp;
     public bool dashCommand;
+    public bool dashCommandDown;
+    public bool dashCommandUp;
 }
