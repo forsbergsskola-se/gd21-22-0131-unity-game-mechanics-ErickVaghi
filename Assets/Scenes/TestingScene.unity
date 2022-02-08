@@ -884,12 +884,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2807805502316397038, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
+      propertyPath: dashTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807805502316397038, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
       propertyPath: cameraShake
       value: 
       objectReference: {fileID: 963194230}
     - target: {fileID: 2807805502316397038, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
       propertyPath: dashMoltiplier
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2807805502316397038, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
       propertyPath: myPlayerInputController
