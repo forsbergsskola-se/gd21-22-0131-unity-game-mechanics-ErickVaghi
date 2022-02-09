@@ -863,7 +863,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1783
+  m_VersionIndex: 1804
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -977,6 +977,8 @@ GameObject:
   - component: {fileID: 6550828574918943044}
   - component: {fileID: 3561512177849287713}
   - component: {fileID: 6189620421610736417}
+  - component: {fileID: 6420397662944856275}
+  - component: {fileID: 323302277278660121}
   m_Layer: 0
   m_Name: Base Traps
   m_TagString: Untagged
@@ -1213,7 +1215,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3065
+  m_VersionIndex: 3086
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1322,6 +1324,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 1.57, z: 0}
+--- !u!114 &6420397662944856275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5546348157167396262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a078fd9e050f24388f9037770bb574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathTimer: {fileID: 323302277278660121}
+--- !u!114 &323302277278660121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5546348157167396262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32395164a61e75e40bc88cf8a3ad8f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathTimeCounter: 0
+  deathTime: 1
+  player: {fileID: 0}
 --- !u!1 &8811221679015449785
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,7 +2215,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1786
+  m_VersionIndex: 1807
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
