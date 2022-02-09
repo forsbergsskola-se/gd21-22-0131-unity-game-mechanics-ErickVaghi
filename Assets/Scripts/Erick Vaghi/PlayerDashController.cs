@@ -21,7 +21,7 @@ public class PlayerDashController : MonoBehaviour
     
     public float verticalVelocityMultiplier = 1f; 
     
-    [SerializeField] private CameraShake cameraShake;
+    //[SerializeField] private CameraShake cameraShake;
 
     private float originalSpeed;
     private float tempWalkSpeed; 

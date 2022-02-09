@@ -15,7 +15,7 @@ public class PlayerChargedDashController : MonoBehaviour
     
     //[SerializeField] private bool isDashing;
     
-    [SerializeField] private CameraShake cameraShake;
+    //[SerializeField] private CameraShake cameraShake;
     
     [SerializeField] private float minDashMultiplier = 100f;
     [SerializeField] private float maxDashMultiplier = 1000f;
