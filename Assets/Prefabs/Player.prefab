@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 5743450247585018721}
-  animator: {fileID: 0}
+  animator: {fileID: 8195291746143797635}
   commandContainer: {fileID: 5743450247157683710}
   myPlayerInputController: {fileID: 5743450247585018718}
   playerWalkController: {fileID: 5743450247585018723}
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 5743450247585018721}
-  animator: {fileID: 0}
+  animator: {fileID: 8195291746143797635}
   commandContainer: {fileID: 5743450247157683710}
   myPlayerInputController: {fileID: 5743450247585018718}
   myGroundChecker: {fileID: 5743450247585018716}
@@ -245,11 +245,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5743450247585018727, guid: 8bd1ddaf8ef310f46802def289669327, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5743450247585018727, guid: 8bd1ddaf8ef310f46802def289669327, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.54
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5743450247585018727, guid: 8bd1ddaf8ef310f46802def289669327, type: 3}
       propertyPath: m_LocalPosition.z
@@ -292,5 +292,10 @@ PrefabInstance:
 --- !u!4 &788351027002614238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5743450247585018727, guid: 8bd1ddaf8ef310f46802def289669327, type: 3}
+  m_PrefabInstance: {fileID: 4991145644499473081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8195291746143797635 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3818941333833683770, guid: 8bd1ddaf8ef310f46802def289669327, type: 3}
   m_PrefabInstance: {fileID: 4991145644499473081}
   m_PrefabAsset: {fileID: 0}
