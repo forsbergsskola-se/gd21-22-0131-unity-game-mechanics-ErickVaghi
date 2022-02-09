@@ -4,6 +4,8 @@ using UnityEngine;
 public class PlayerDashController : MonoBehaviour
 {
     [SerializeField] private Rigidbody myRigidBody;
+    [SerializeField] private Animator animator;
+    
     [SerializeField] private CommandContainer commandContainer;
     [SerializeField] private PlayerInputController myPlayerInputController;
     [SerializeField] private PlayerWalkController playerWalkController;
@@ -53,11 +55,14 @@ public class PlayerDashController : MonoBehaviour
         }
         if (isDashing)
         {
+            animator.SetTrigger("Player Is Dashing");
             //Debug.Log("start counting");
             dashTimeCounter -= Time.deltaTime;
             //Debug.Log(dashTimeCounter);
             if (dashTimeCounter <= 0)
             {
+                animator.ResetTrigger("Player Is Dashing");
+                animator.SetTrigger("Player Stopped Dashing");
                 //Debug.Log("stopped dashing");
                 myPlayerInputController.enabled = true;
                 verticalVelocityMultiplier = 1;

@@ -169,7 +169,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7798408, y: 1}
+    m_SensorSize: {x: 1.7787234, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -467,55 +467,6 @@ MonoBehaviour:
 --- !u!4 &647603867 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5743450247585018727, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-  m_PrefabInstance: {fileID: 5743450247157683708}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &647603873 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5743450247585018723, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-  m_PrefabInstance: {fileID: 5743450247157683708}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83a55ff69d2bf80439933b54b379b487, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &647603874 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5743450247585018716, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-  m_PrefabInstance: {fileID: 5743450247157683708}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20684090d14c2244f848310714bfd981, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &647603875 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5743450247157683710, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-  m_PrefabInstance: {fileID: 5743450247157683708}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6f65e8a62490e044b61ad8f4c36052e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &647603876 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5743450247585018718, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-  m_PrefabInstance: {fileID: 5743450247157683708}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 971b52322e421a041b03087913d8e021, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!54 &647603877 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 5743450247585018721, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
   m_PrefabInstance: {fileID: 5743450247157683708}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
@@ -962,6 +913,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 788351027002614238, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 788351027002614238, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807805502316397038, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2807805502316397038, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
       propertyPath: cameraShake
       value: 
@@ -1015,32 +978,8 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6716313718201129806, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-      propertyPath: myRigidBody
+      propertyPath: animator
       value: 
-      objectReference: {fileID: 647603877}
-    - target: {fileID: 6716313718201129806, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-      propertyPath: myGroundChecker
-      value: 
-      objectReference: {fileID: 647603874}
-    - target: {fileID: 6716313718201129806, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-      propertyPath: commandContainer
-      value: 
-      objectReference: {fileID: 647603875}
-    - target: {fileID: 6716313718201129806, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-      propertyPath: maxDashMultiplier
-      value: 80000
       objectReference: {fileID: 0}
-    - target: {fileID: 6716313718201129806, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-      propertyPath: minDashMultiplier
-      value: 8000
-      objectReference: {fileID: 0}
-    - target: {fileID: 6716313718201129806, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-      propertyPath: playerWalkController
-      value: 
-      objectReference: {fileID: 647603873}
-    - target: {fileID: 6716313718201129806, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}
-      propertyPath: myPlayerInputController
-      value: 
-      objectReference: {fileID: 647603876}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 861b996a5457a324b9e19d06147b4b4c, type: 3}

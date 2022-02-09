@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerChargedDashController : MonoBehaviour
 { 
     [SerializeField] private Rigidbody myRigidBody;
+    [SerializeField] private Animator animator;
     
     [SerializeField] private CommandContainer commandContainer;
     [SerializeField] private PlayerInputController myPlayerInputController;
@@ -48,10 +49,13 @@ public class PlayerChargedDashController : MonoBehaviour
         {
             //Increase charge progress, dividing Time.deltaTime let us control how many seconds it takes to charge a full dash.
             chargeProgress += Time.deltaTime / dashChargeTime;
+            animator.SetTrigger("Player Charging Dash");
         }
         
         if (commandContainer.dashCommandUp && myGroundChecker.IsGrounded)
         {
+            animator.ResetTrigger("Player Charging Dash");
+            animator.SetTrigger("Player Stopped Dashing");
             dashMoltiplier = Mathf.Lerp(minDashMultiplier, maxDashMultiplier, chargeProgress);
             if (facingRight)
             {
